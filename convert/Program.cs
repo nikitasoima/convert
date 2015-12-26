@@ -12,9 +12,7 @@ namespace convert
         static void Main(string[] args)
         {
             double a, b, c, d;
-
-
-            Console.WriteLine("Введите сторону a первого конверта: ");
+             Console.WriteLine("Введите сторону a первого конверта: ");
             try
             {
 
@@ -77,10 +75,6 @@ namespace convert
                 Console.WriteLine("Введите слово exit для выхода");
             }
             return;
-
-
-
-
         }
     }
 }
