@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace convert
 {
     class Program
@@ -39,9 +40,9 @@ namespace convert
             {
                 c = Convert.ToDouble(Console.ReadLine());
             }
-            //catch
-          //  {
-           //     Console.WriteLine("Повторите попытку");
+            catch
+            {
+                Console.WriteLine("Повторите попытку");
                 c = Convert.ToDouble(Console.ReadLine());
             }
 
@@ -59,10 +60,10 @@ namespace convert
                 Console.WriteLine("Конверты одинаковы");
             else
             {
-                if (((a < c) && (b < d) || (a < d) && (b < c)))
-                    Console.WriteLine("Первый конверт можно вложить во второй");
-                else if (((c < a) && (d < b) || (d < a) && (c < b)))
-                    Console.WriteLine("Второй конверт можно вложить в первый");
+                 if (Math.Max(c,d) <= Math.Min(a,b))
+                    Console.WriteLine("Второй конверт можно вложить во второй");
+                 else if ((Math.Max(c, d) <= Math.Max(a, b)) && ((Math.Min(c, d) <= Math.Min(a, b)))) 
+                    Console.WriteLine("Первый конверт можно вложить в первый");
             }
             Console.ReadLine();
         }
