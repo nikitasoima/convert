@@ -9,53 +9,27 @@ namespace convert
 {
     class Program
     {
+        static void input(string s , out double a)
+        {
+            Console.WriteLine("Введите сторону {0} конверта: ", s);
+            try
+            {
+                a = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Повторите попытку");
+                input(s, out a);
+            }
+
+        }
         static void Main(string[] args)
         {
             double a, b, c, d;
-
-
-            Console.WriteLine("Введите сторону a первого конверта: ");
-            try
-            {
-
-                a = Convert.ToDouble(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
-                a = Convert.ToDouble(Console.ReadLine());
-            }
-            Console.WriteLine("Введите сторону b первого конверта: ");
-            try
-            {
-                b = Convert.ToDouble(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
-                b = Convert.ToDouble(Console.ReadLine());
-            }
-            Console.WriteLine("Введите сторону c второго конверта: ");
-            try
-            {
-                c = Convert.ToDouble(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
-                c = Convert.ToDouble(Console.ReadLine());
-            }
-
-            Console.WriteLine("Введите сторону d второго конверта: ");
-            try
-            {
-                d = Convert.ToDouble(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
-                d = Convert.ToDouble(Console.ReadLine());
-            }
+            input("а первого", out a);
+            input("b первого", out b);
+            input("c второго", out c);
+            input("d второго", out d);          
             if (((a == c) && (b == d) || (a == d) && (b == c)))
                 Console.WriteLine("Конверты одинаковы");
             else
