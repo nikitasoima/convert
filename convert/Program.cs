@@ -60,21 +60,27 @@ namespace convert
                 Console.WriteLine("Конверты одинаковы");
             else
             {
-            if (((a == c) && (b == d) || (a == d) && (b == c))) 
-                Console.WriteLine("Конверты одинаковы"); 
-            else 
-            { 
-            if (((a < c) && (b < d) || (a < d) && (b < c))) 
-            Console.WriteLine("Первый конверт можно вложить во второй"); 
-            else if (((c < a) && (d < b) || (d < a) && (c < b))) 
-            Console.WriteLine("Второй конверт можно вложить в первый"); 
+                if (((a == c) && (b == d) || (a == d) && (b == c)))
+                    Console.WriteLine("Конверты одинаковы");
+                else
+                {
+                    if (((a < c) && (b < d) || (a < d) && (b < c)))
+                        Console.WriteLine("Первый конверт можно вложить во второй");
+                    else if (((c < a) && (d < b) || (d < a) && (c < b)))
+                        Console.WriteLine("Второй конверт можно вложить в первый");
+                }
+
             }
-            Console.ReadLine();
+            Console.WriteLine("Введите слово exit для выхода");
+            while (Console.ReadLine() != "exit")
+            {
+                Console.WriteLine("Введите слово exit для выхода");
+            }
+            return;
+
+
+
+
         }
-
-
-
-
-
     }
 }
