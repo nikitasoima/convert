@@ -39,9 +39,9 @@ namespace convert
             {
                 c = Convert.ToDouble(Console.ReadLine());
             }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
+            //catch
+          //  {
+           //     Console.WriteLine("Повторите попытку");
                 c = Convert.ToDouble(Console.ReadLine());
             }
 
