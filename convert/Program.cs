@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace convert
 {
     class Program
@@ -11,6 +12,7 @@ namespace convert
         static void Main(string[] args)
         {
             double a, b, c, d;
+
 
             Console.WriteLine("Введите сторону a первого конверта: ");
             try
@@ -20,7 +22,7 @@ namespace convert
             }
             catch
             {
-                Console.WriteLine("Повторите попытку:");
+                Console.WriteLine("Повторите попытку");
                 a = Convert.ToDouble(Console.ReadLine());
             }
             Console.WriteLine("Введите сторону b первого конверта: ");
@@ -30,7 +32,7 @@ namespace convert
             }
             catch
             {
-                Console.WriteLine("Повторите попытку:");
+                Console.WriteLine("Повторите попытку");
                 b = Convert.ToDouble(Console.ReadLine());
             }
             Console.WriteLine("Введите сторону c второго конверта: ");
@@ -40,7 +42,7 @@ namespace convert
             }
             catch
             {
-                Console.WriteLine("Повторите попытку:");
+                Console.WriteLine("Повторите попытку");
                 c = Convert.ToDouble(Console.ReadLine());
             }
 
@@ -51,26 +53,23 @@ namespace convert
             }
             catch
             {
-                Console.WriteLine("Повторите попытку:");
+                Console.WriteLine("Повторите попытку");
                 d = Convert.ToDouble(Console.ReadLine());
             }
             if (((a == c) && (b == d) || (a == d) && (b == c)))
                 Console.WriteLine("Конверты одинаковы");
             else
             {
-                if (((a < c) && (b < d) || (a < d) && (b < c)))
-                    Console.WriteLine("Первый конверт можно вложить во второй");
-                else if (((c < a) && (d < b) || (d < a) && (c < b)))
-                    Console.WriteLine("Второй конверт можно вложить в первый");
+            if (((a == c) && (b == d) || (a == d) && (b == c))) 
+                Console.WriteLine("Конверты одинаковы"); 
+            else 
+            { 
+            if (((a < c) && (b < d) || (a < d) && (b < c))) 
+            Console.WriteLine("Первый конверт можно вложить во второй"); 
+            else if (((c < a) && (d < b) || (d < a) && (c < b))) 
+            Console.WriteLine("Второй конверт можно вложить в первый"); 
             }
-          Console.WriteLine("Введите слово exit для выхода:");       
-          while (Console.ReadLine() != "exit")
-          {
-              Console.WriteLine("Введите слово exit для выхода");
-          }
-              return;
-          
-          
+            Console.ReadLine();
         }
 
 
