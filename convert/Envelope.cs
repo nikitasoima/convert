@@ -36,6 +36,9 @@ namespace Converts
                     else if (((c < a) && (d < b) || (d < a) && (c < b)))
                         Console.WriteLine("Второй конверт можно вложить в первый");
                 }
-         }   
+        
+        } 
+  
     }
+
 }

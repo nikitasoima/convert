@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace Converts
 {
     class Program
-    {
-       
+    {      
         static void Main(string[] args)
         {
             double a, b, c, d;
