@@ -9,7 +9,7 @@ namespace convert
 {
     class Program
     {
-        static void input(string s , out double a)
+        public static void Input(string s , out double a)
         {
             Console.WriteLine("Введите сторону {0} конверта: ", s);
             try
@@ -19,22 +19,20 @@ namespace convert
             catch
             {
                 Console.WriteLine("Повторите попытку");
-                input(s, out a);
+                Input(s, out a);
             }
-
         }
         static void Main(string[] args)
         {
             double a, b, c, d;
-            input("а первого", out a);
-            input("b первого", out b);
-            input("c второго", out c);
-            input("d второго", out d);          
+            Input("а первого", out a);
+            Input("b первого", out b);
+            Input("c второго", out c);
+            Input("d второго", out d);          
             if (((a == c) && (b == d) || (a == d) && (b == c)))
                 Console.WriteLine("Конверты одинаковы");
             else
             {
-                
                     if (((a < c) && (b < d) || (a < d) && (b < c)))
                         Console.WriteLine("Первый конверт можно вложить во второй");
                     else if (((c < a) && (d < b) || (d < a) && (c < b)))
@@ -46,10 +44,6 @@ namespace convert
                 Console.WriteLine("Введите слово exit для выхода");
             }
             return;
-
-
-
-
-        }
+            }
     }
 }
