@@ -9,41 +9,23 @@ namespace convert
 {
     class Program
     {
-        public static void Input(string s , out double a)
-        {
-            Console.WriteLine("Введите сторону {0} конверта: ", s);
-            try
-            {
-                a = Convert.ToDouble(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Повторите попытку");
-                Input(s, out a);
-            }
-        }
+       
         static void Main(string[] args)
         {
             double a, b, c, d;
-            Input("а первого", out a);
-            Input("b первого", out b);
-            Input("c второго", out c);
-            Input("d второго", out d);          
-            if (((a == c) && (b == d) || (a == d) && (b == c)))
-                Console.WriteLine("Конверты одинаковы");
-            else
-            {
-                    if (((a < c) && (b < d) || (a < d) && (b < c)))
-                        Console.WriteLine("Первый конверт можно вложить во второй");
-                    else if (((c < a) && (d < b) || (d < a) && (c < b)))
-                        Console.WriteLine("Второй конверт можно вложить в первый");
-            }
+            Envelope.input("а первого", out a);
+            Envelope.input("b первого", out b);
+            Envelope.input("c второго", out c);
+            Envelope.input("d второго", out d);
+            Envelope convert1 = new Envelope(a, b);
+            Envelope convert2 = new Envelope(c, d);          
+            convert1.Compare(convert2);
             Console.WriteLine("Введите слово exit для выхода");
             while (Console.ReadLine() != "exit")
             {
                 Console.WriteLine("Введите слово exit для выхода");
             }
             return;
-            }
+        }
     }
 }
