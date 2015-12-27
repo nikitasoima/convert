@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace convert
+namespace Converts
 {
     class Program
     {
@@ -13,10 +13,10 @@ namespace convert
         static void Main(string[] args)
         {
             double a, b, c, d;
-            Envelope.input("а первого", out a);
-            Envelope.input("b первого", out b);
-            Envelope.input("c второго", out c);
-            Envelope.input("d второго", out d);
+            Envelope.Input("а первого", out a);
+            Envelope.Input("b первого", out b);
+            Envelope.Input("c второго", out c);
+            Envelope.Input("d второго", out d);
             Envelope convert1 = new Envelope(a, b);
             Envelope convert2 = new Envelope(c, d);          
             convert1.Compare(convert2);

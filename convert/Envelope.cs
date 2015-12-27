@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace convert
+namespace Converts
 {
      class Envelope
     {      
-          double size1;
-          double size2;
+         double size1;
+         double size2;
          public double X
          {
              get {return size1;}
@@ -27,7 +27,7 @@ namespace convert
              size1 = newsize1;
              size2 = newsize2;
          }       
-         static public void input(string s, out double x)
+         static public void Input(string s, out double x)
          {
              Console.WriteLine("Введите сторону {0} конверта: ", s);
              try
@@ -37,7 +37,7 @@ namespace convert
              catch
              {
                  Console.WriteLine("Повторите попытку");
-                 input(s, out x);
+                 Input(s, out x);
              }
          }
          public void Compare(Envelope convert)

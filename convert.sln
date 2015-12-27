@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "convert", "convert\convert.csproj", "{FE6155A9-431A-4EAD-B8E7-FC50ABF23D73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert", "convert\Convert.csproj", "{FE6155A9-431A-4EAD-B8E7-FC50ABF23D73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
