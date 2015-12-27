@@ -9,17 +9,17 @@ namespace convert
 {
     class Program
     {
-        static void input(string s , out double a)
+        static void input(string s , out double x)
         {
             Console.WriteLine("Введите сторону {0} конверта: ", s);
             try
             {
-                a = Convert.ToDouble(Console.ReadLine());
+                x = Convert.ToDouble(Console.ReadLine());
             }
             catch
             {
                 Console.WriteLine("Повторите попытку");
-                input(s, out a);
+                input(s, out x);
             }
 
         }
@@ -34,27 +34,18 @@ namespace convert
                 Console.WriteLine("Конверты одинаковы");
             else
             {
-                if (((a == c) && (b == d) || (a == d) && (b == c)))
-                    Console.WriteLine("Конверты одинаковы");
-                else
-                {
                     if (((a < c) && (b < d) || (a < d) && (b < c)))
                         Console.WriteLine("Первый конверт можно вложить во второй");
                     else if (((c < a) && (d < b) || (d < a) && (c < b)))
-                        Console.WriteLine("Второй конверт можно вложить в первый");
-                }
-
+                        Console.WriteLine("Второй конверт можно вложить в первый");            
             }
+    
             Console.WriteLine("Введите слово exit для выхода");
             while (Console.ReadLine() != "exit")
             {
                 Console.WriteLine("Введите слово exit для выхода");
             }
             return;
-
-
-
-
         }
     }
 }
