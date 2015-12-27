@@ -13,10 +13,10 @@ namespace Converts
         static void Main(string[] args)
         {
             double a, b, c, d;
-            Envelope.Input("а первого", out a);
-            Envelope.Input("b первого", out b);
-            Envelope.Input("c второго", out c);
-            Envelope.Input("d второго", out d);
+            Helper.Input("а первого", out a);
+            Helper.Input("b первого", out b);
+            Helper.Input("c второго", out c);
+            Helper.Input("d второго", out d);
             Envelope convert1 = new Envelope(a, b);
             Envelope convert2 = new Envelope(c, d);          
             convert1.Compare(convert2);

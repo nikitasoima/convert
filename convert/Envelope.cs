@@ -26,20 +26,7 @@ namespace Converts
          {
              size1 = newsize1;
              size2 = newsize2;
-         }       
-         static public void Input(string s, out double x)
-         {
-             Console.WriteLine("Введите сторону {0} конверта: ", s);
-             try
-             {
-                 x = Convert.ToDouble(Console.ReadLine());
-             }
-             catch
-             {
-                 Console.WriteLine("Повторите попытку");
-                 Input(s, out x);
-             }
-         }
+         }              
          public void Compare(Envelope convert)
          {
              double a = this.X;
