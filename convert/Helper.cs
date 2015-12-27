@@ -13,20 +13,19 @@ namespace Converts
             Console.WriteLine("Введите сторону {0} конверта: ", s);
         try
         {
-        string A; 
-        A = Console.ReadLine(); 
-        if (A == "exit") 
-        { 
-        Environment.Exit(0); 
-        }
-        x = Convert.ToDouble(A);
+            string A; 
+            A = Console.ReadLine();
+            if (A == "exit")
+            {
+                Environment.Exit(0);
+            }              
+            x = Convert.ToDouble(A);
         }
         catch
         {
-        Console.WriteLine("Повторите попытку");
-        Input(s, out x); 
-        }
-
+            Console.WriteLine("Повторите попытку");
+            Input(s, out x);
+        }          
         }
         
     }

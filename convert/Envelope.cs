@@ -19,12 +19,12 @@ namespace Converts
              X = newX;
              Y = newY;
          }              
-         public void Compare(Envelope SecondEnv)
+         public void Compare(Envelope secondEnv)
          {
              double a = X;
              double b = Y;
-             double c = SecondEnv.X;
-             double d = SecondEnv.Y;
+             double c = secondEnv.X;
+             double d = secondEnv.Y;
              if (((a == c) && (b == d) || (a == d) && (b == c)))
             { 
                  Console.WriteLine("Конверты одинаковы");         
