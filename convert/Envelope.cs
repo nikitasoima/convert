@@ -35,10 +35,7 @@ namespace Converts
                         Console.WriteLine("Первый конверт можно вложить во второй");
                     else if (((c < a) && (d < b) || (d < a) && (c < b)))
                         Console.WriteLine("Второй конверт можно вложить в первый");
-                }
-        
-        } 
-  
+                }        
+        }   
     }
-
 }
