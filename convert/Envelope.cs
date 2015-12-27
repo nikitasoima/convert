@@ -8,31 +8,23 @@ namespace Converts
 {
      class Envelope
     {      
-         double size1;
-         double size2;
-         public double X
-         {
-             get {return size1;}
-         }
-         public double Y
-         {
-             get { return size2;}
-         }
+         public double X { get; set;}
+         public double Y { get; set;}      
          public Envelope()
          {
 
          }
-         public Envelope( double newsize1, double newsize2)
+         public Envelope( double newX, double newY)
          {
-             size1 = newsize1;
-             size2 = newsize2;
+             X = newX;
+             Y = newY;
          }              
-         public void Compare(Envelope convert)
+         public void Compare(Envelope SecondEnv)
          {
-             double a = this.X;
-             double b = this.Y;
-             double c = convert.X;
-             double d = convert.Y;
+             double a = X;
+             double b = Y;
+             double c = SecondEnv.X;
+             double d = SecondEnv.Y;
              if (((a == c) && (b == d) || (a == d) && (b == c)))
             { 
                  Console.WriteLine("Конверты одинаковы");         
